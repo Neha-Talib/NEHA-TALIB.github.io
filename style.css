@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #dab1da;
+}
+
+/* 🌌 LIVE BACKGROUND */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f172a, #1e1b4b);
+  z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 45px;
+  color:#dab1da;
+}
+
+/* LINKS */
+.links a {
+  margin: 10px;
+  padding: 10px 15px;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* CARDS */
+.card {
+  width: 80%;
+  margin: 30px auto;
+  padding: 25px;
+  background: var(--card);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+/* PROJECT GRID */
+.grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project {
+  flex: 1;
+  min-width: 200px;
+  padding: 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+}
