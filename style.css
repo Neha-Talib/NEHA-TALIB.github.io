@@ -166,6 +166,94 @@ body {
   border-radius: 14px;
 }
 
+/* QUICK MESSAGE */
+.quick-message {
+  margin-top: 18px;
+  padding: 18px 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 14px;
+}
+
+.quick-message h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.quick-message-text {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.quick-message-form {
+  display: grid;
+  gap: 10px;
+}
+
+.quick-message-form label {
+  font-size: 13px;
+  color: rgba(234, 220, 255, 0.9);
+}
+
+.quick-message-form input,
+.quick-message-form textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.18);
+  color: var(--text);
+  outline: none;
+}
+
+.quick-message-form input::placeholder,
+.quick-message-form textarea::placeholder {
+  color: rgba(234, 220, 255, 0.55);
+}
+
+.quick-message-form input:focus,
+.quick-message-form textarea:focus {
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.20);
+}
+
+.quick-message-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.quick-message-form button {
+  cursor: pointer;
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #0b1026;
+  font-weight: 750;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.quick-message-form button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.quick-message-form button:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.quick-message-hint {
+  color: rgba(234, 220, 255, 0.8);
+  min-height: 1.2em;
+  font-size: 13px;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
