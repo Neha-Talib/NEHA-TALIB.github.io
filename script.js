@@ -45,6 +45,36 @@ if (!prefersReducedMotion && typeof particlesJS === "function") {
   });
 }
 
+// Quick Message (mailto prefill)
+const QUICK_MESSAGE_TO = "123neha32@gmail.com";
+const quickMessageForm = document.getElementById("quickMessageForm");
+const quickMessageHint = document.getElementById("quickMessageHint");
+
+if (quickMessageForm) {
+  quickMessageForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = (document.getElementById("quickMessageEmail")?.value || "").trim();
+    const message = (document.getElementById("quickMessageText")?.value || "").trim();
+
+    if (!message) {
+      if (quickMessageHint) quickMessageHint.textContent = "Please write a message.";
+      return;
+    }
+
+    const subject = "Quick message from portfolio";
+    const bodyParts = [];
+    if (email) bodyParts.push(`From: ${email}`);
+    bodyParts.push(message);
+    const body = bodyParts.join("\n\n");
+
+    const mailtoUrl = `mailto:${encodeURIComponent(QUICK_MESSAGE_TO)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    if (quickMessageHint) quickMessageHint.textContent = "Opening your email app...";
+    window.location.href = mailtoUrl;
+  });
+}
+
 // Smooth anchor scroll (minimal, respects reduced motion)
 document.addEventListener("click", (e) => {
   const a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
