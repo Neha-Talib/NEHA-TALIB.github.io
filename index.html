@@ -97,6 +97,26 @@
   </div>
 </section>
 
+    <!-- QUICK MESSAGE (mailto) -->
+  <div class="quick-message" aria-label="Quick message">
+    <h3>💬 Quick Message</h3>
+    <p class="quick-message-text">Send a short note.</p>
+
+    <form id="quickMessageForm" class="quick-message-form">
+      <label for="quickMessageEmail">Your email (optional)</label>
+      <input id="quickMessageEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+
+      <label for="quickMessageText">Message</label>
+      <textarea id="quickMessageText" name="message" rows="5" placeholder="Write your message..."></textarea>
+
+      <div class="quick-message-actions">
+        <button type="submit">Send message</button>
+        <span id="quickMessageHint" class="quick-message-hint" aria-live="polite"></span>
+      </div>
+    </form>
+  </div>
+</section>
+
 
 <footer>
   © 🌼 2026 Neha | Research Portfolio | Open to opportunities 🌼
